@@ -1,0 +1,19 @@
+.socials__view {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+    background-image: radial-gradient(50%, hsl(0, 0%, 0%), hsl(0, 0%, 15%));
+    background-image: radial-gradient(circle, hsl(0, 0%, 0%) 64%, hsl(0, 0%, 15%) 100%);
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .socials__view {
+        padding: 20vh 0;
+        padding-top: 25vh;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}
+ 
