@@ -15,14 +15,15 @@
     }
   },
   "scripts": {
-    "prebuild": "run-s clean",
+    "prebuild": "run-s clean copy-static",
     "build": "parcel build --no-source-maps",
     "clean": "rimraf ./dist",
     "lint": "run-s lint:code",
     "lint:code": "eslint --ext ts,tsx src",
     "dev": "parcel",
     "start": "npm-run-all prebuild dev",
-    "test": "jest"
+    "test": "jest",
+    "copy-static": "copyfiles --flat src/assets/static/*.jpg dist/static"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +42,7 @@
     "@types/react-dom": "^18.0.1",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.13.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
