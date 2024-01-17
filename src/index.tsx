@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import { createRoot } from "react-dom/client";
+import { 
+  createBrowserRouter, 
+  RouterProvider,
+  BrowserRouter,
+  Routes,
+  Route, 
+  Outlet, 
+  Link,
+} from 'react-router-dom';
 // import TypeWriterEffect from "./components/typewriter/typewriter";
 // import ThreeDeeCard from "./components/3d-card/threedee-card";
 import LayoutOne from "./layout-one";
 import "./assets/index.scss";
 import vic10usLogo from "./assets/images/vic10us-logo.png";
-
+import Resume from './resume';
+import Layout from './layout';
 
 class App extends Component {
   state = {};
@@ -50,7 +60,15 @@ class App extends Component {
 
   render() {
     return (
-        <LayoutOne />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<LayoutOne />} />
+          <Route path="about" element={<LayoutOne />} />
+          <Route path="dashboard" element={<LayoutOne />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="*" element={<LayoutOne />} />
+        </Route>
+      </Routes>
     );
   }
 
@@ -92,4 +110,10 @@ class App extends Component {
 
 const container = document.getElementById("root");
 const root = createRoot(container as Element);
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);

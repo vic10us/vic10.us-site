@@ -5,7 +5,6 @@
   "source": "public/index.html",
   "parcel-namer-rewrite": {
     "chain": "@parcel/namer-default",
-    "developmentHashing": true,
     "silent": true,
     "rules": {
       "(.*)\\.(svg|png|gif|jpg)": "images/$1{.hash}.$2",
@@ -13,6 +12,9 @@
       "(.*)\\.(js|js.map)": "js/$1{.hash}.$2",
       "(.*)\\.(css)": "styles/$1{.hash}.$2"
     }
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
   },
   "scripts": {
     "prebuild": "run-s clean copy-static",
@@ -29,13 +31,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.4.0",
-    "@parcel/transformer-inline-string": "^2.5.0",
-    "@parcel/transformer-sass": "^2.4.0",
-    "@parcel/transformer-svg-react": "^2.5.0",
-    "@parcel/transformer-typescript-tsc": "^2.5.0",
-    "@parcel/transformer-webmanifest": "^2.4.0",
-    "@parcel/utils": "^2.5.0",
+    "@parcel/packager-raw-url": "^2.11.0",
+    "@parcel/transformer-inline-string": "^2.11.0",
+    "@parcel/transformer-sass": "^2.11.0",
+    "@parcel/transformer-svg-react": "^2.11.0",
+    "@parcel/transformer-typescript-tsc": "^2.11.0",
+    "@parcel/transformer-webmanifest": "^2.11.0",
+    "@parcel/utils": "^2.11.0",
     "@reactivex/rxjs": "^6.6.7",
     "@types/jest": "^27.5.2",
     "@types/react": "^18.0.5",
@@ -43,13 +45,16 @@
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "copyfiles": "^2.4.1",
+    "devlop": "^1.1.0",
     "eslint": "^8.13.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "jest": "^28.1.0",
     "npm-run-all": "^4.1.5",
-    "parcel": "^2.5.0",
-    "parcel-namer-rewrite": "^2.0.0-rc.2",
+    "parcel": "^2.11.0",
+    "parcel-namer-rewrite": "^2.10.3-rc.2",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
     "rimraf": "^3.0.2",
     "sass": "^1.50.1",
     "ts-jest": "^28.0.1",
@@ -58,7 +63,14 @@
   },
   "dependencies": {
     "lit": "^2.2.2",
+    "md-block": "^0.0.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.21.2",
+    "rehype-mermaid": "^2.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "remark-mermaidjs": "^6.0.0"
   }
 }

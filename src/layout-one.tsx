@@ -89,7 +89,7 @@ class LayoutOne extends Component {
               </li> */}
               <li>
                 <a ref={this.myRef} className="nav__projects" href="#projects">
-                  Projects
+                  Component Playground
                 </a>
               </li>
               {/* <li>

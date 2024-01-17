@@ -38,6 +38,58 @@ $logo-colors:
   position: relative;
 }
 
+.resume {
+  content: "";
+  width: 100%;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  padding-top: 10vh;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10vh;
+  background-image: radial-gradient(#525252, #131313);
+  min-height: 100vh;
+  position: relative;
+
+  p {
+    padding-bottom: 1em;
+    width: 100%;
+  }
+
+  ul {
+    padding-left: 3em;
+    padding-bottom: 1em;
+
+    li {
+      padding-bottom: 0.5em;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 80%;
+    max-width: 1000px;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1, h2 {
+    padding-bottom: 1em;
+  }
+
+  h4 {
+    padding-top: -2em;
+    padding-bottom: 1em;
+    font-weight: 500;
+  }
+}
+
 .nav-toggle,
 #nav-toggle-label {
   display: none;

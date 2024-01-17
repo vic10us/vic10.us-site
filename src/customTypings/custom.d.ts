@@ -20,3 +20,14 @@ declare module "*.svg" {
   const src: string;
   export default src;
 }
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'md-block': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
+  }
+}
