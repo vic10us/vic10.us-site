@@ -1,10 +1,12 @@
 import React, { Component, RefObject } from "react";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import TypeWriterEffect from "./components/typewriter/typewriter";
 import SocialsView from "./components/socials/socials";
 import ProjectsView from "./views/projects";
 import WaterView from "./views/water";
 import ProgressView from "./views/progress";
 import Vic10usLogo from './components/logos/vic10us-logo';
+import homeMetaImage from "./assets/images/home-ss.png";
 // import Vic10usLogo from "jsx:./assets/images/vic10us-logo.svg";
 // import LogoTwo from 'jsx:./assets/images/vic10us-logo.svg';
 // import NeonButton from './components/neon-button';
@@ -70,6 +72,21 @@ class LayoutOne extends Component {
   render() {
     return (
       <main id="home">
+        <Helmet>
+            <title>vic10us Home</title>
+            <meta charSet="utf-8" />
+            <meta name='description' content="vic10us Component Playground" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="vic10us Home and Component Playground" />
+            <meta property="og:description" content="vic10us Component Playground" />
+            <meta property="og:image" content={homeMetaImage} />
+            <meta property="og:url" content="https://vic10.us/" />
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://vic10.us/" />
+            <meta property="twitter:title" content="vic10us Home and Component Playground" />
+            <meta property="twitter:description" content="vic10us Component Playground" />
+            <link rel="canonical" href="https://vic10.us/" />
+        </Helmet>
         <div className="nav-container">
           <div className="nav-background"></div>
           <div className="nav-border"></div>

@@ -1,4 +1,6 @@
 import React, { Component, RefObject } from "react";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import homeMetaImage from "./assets/images/home-ss.png";
 import SocialsView from "./components/socials/socials";
 
 class Resume extends Component {
@@ -64,6 +66,22 @@ class Resume extends Component {
   render() {
     return (
       <main id="home">
+        <Helmet>
+            <title>IT Maestro and Innovation Alchemist 🎺</title>
+            <meta charSet="utf-8" />
+            <meta name='description' content="With nearly three decades of triumphs in the ever-evolving landscape of computer engineering, I stand as a seasoned IT virtuoso. My expertise spans solution delivery, development prowess, and unwavering support, with a mastery that extends to large-scale consolidation endeavors, intricate data center choreography, and orchestrating cloud computing symphonies." />
+            <meta property="og:type" content="profile" />
+            <meta property="og:title" content="IT Maestro and Innovation Alchemist 🎺" />
+            <meta property="og:description" content="With nearly three decades of triumphs in the ever-evolving landscape of computer engineering, I stand as a seasoned IT virtuoso. My expertise spans solution delivery, development prowess, and unwavering support, with a mastery that extends to large-scale consolidation endeavors, intricate data center choreography, and orchestrating cloud computing symphonies." />
+            <meta property="og:image" content={homeMetaImage} />
+            <meta property="og:url" content="https://vic10.us/resume" />
+            <meta property="twitter:card" content="summary_large_image" />
+            <meta property="twitter:url" content="https://vic10.us/resume" />
+            <meta property="twitter:title" content="IT Maestro and Innovation Alchemist 🎺" />
+            <meta property="twitter:description" content="With nearly three decades of triumphs in the ever-evolving landscape of computer engineering, I stand as a seasoned IT virtuoso. My expertise spans solution delivery, development prowess, and unwavering support, with a mastery that extends to large-scale consolidation endeavors, intricate data center choreography, and orchestrating cloud computing symphonies." />
+            <link rel="canonical" href="https://vic10.us/resume" />
+        </Helmet>
+
         <div className="nav-container">
           <div className="nav-background"></div>
           <div className="nav-border"></div>
